@@ -12,12 +12,59 @@
 </head>
 <body>
 <div id="sidebar" data-target=".navbar" class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+    </div>
+    <ul class="list-unstyled components">
+        <p>Dummy Heading</p>
+        <!--class="active"-->
+        <li>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li><a href="#home1">Home 1</a></li>
+                <li><a href="#home2">Home 2</a></li>
+                <li><a href="#nome3">Home 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">About</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li><a href="#home4">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu2">
+                <li><a href="#qwwww">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Portfolio</a>
+        </li>
+        <li>
+            <a href="#">Portfolio1</a>
+        </li>
+        <li>
+            <a href="#">Portfolio2</a>
+        </li>
+        <li>
+            <a href="#">Portfolio3</a>
+        </li>
+        <li>
+            <a href="#">Portfolio4</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+    <ul class="list-unstyled CTAs">
+        <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+        <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+    </ul>
 </div>
-
 <!-- Page content -->
 <div id="main" class="main">
 
@@ -27,7 +74,7 @@
             <div class="navbar-header">
                 <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
                     <i class="glyphicon glyphicon-align-left"></i>
-                    <span>Toggle Sidebar</span>
+                    <span>Меню</span>
                 </button>
             </div>
 
@@ -46,106 +93,128 @@
         Программа является кассовым терминалом с возможностью:<br></P>
     <ul>
         <li><P>Производить настройки подключаемого кассового аппарата.</P></li>
+        <li><P>Выбирать товар для продажи через сканер шрих кода</P></li>
         <li><P>Пробивать чеки текущей продажи За наличный расчет.</P></li>
         <li><P>Пробивать чеки текущей продажи Эквайрнг (Сбер. Банк).</P></li>
-        <li><P>Осуществлять возврат товара в контексте текущей смены.</P></li>
+        <li><P>Осуществлять возврат товара по чеку в контексте текущей смены.</P></li>
         <li><P>Учет остатков в торговой точке на момент продажи.</P></li>
-        <li><P>Мониторинг исторических данных о продажи.</P></li>
+        <li><P>Мониторинг исторических данных о продажи в разрезе продавца, торговой точки.</P></li>
         <li><P>Принимать служебные распоряжения.</P></li>
         <li><P>Отправлять различные заявки.</P></li>
     </ul>
-
+    <h2 id="home1">О программе</h2>
     <P>Программа написана на Java <a class="btn btn-link" href="https://ru.wikipedia.org/wiki/JavaFX">JavaFx</a> .<br>
         Программа может быть развернута на Windows и Unix подобных операционных системах,<br>
-        разрядностью 32-64 бит.</P>
-
-    <P>Программа поддерживает контрольно кассовое оборудование производителя <a  href="http://www.atol.ru/" class="btn btn-link">АТОЛ</a> <br></P>
-    <a href="#spoiler-1" data-toggle="collapse" class="btn btn-primary">Список моделей</a>
+        разрядностью 32-64 бит.
+    Программа может эксплуатироваться на компьютере стипом мониора - сенсорный экран (touchscreen)<br>
+    Программа поддерживает контрольно кассовое оборудование производителя <a href="http://www.atol.ru/"
+                                                                                class="btn btn-link">АТОЛ</a> <br>
+    <a href="#spoiler-1" data-toggle="collapse" class="btn btn-primary">Список моделей</a></P>
     <div class="collapse" id="spoiler-1">
         <ul>
             <li>
-    <P>3 Триум-Ф,</P></li>
-    <li><P>14 ФЕЛИКС-Р Ф,</P></li>
-    <li><P>15 ФЕЛИКС-02К / ЕНВД,</P></li>
-    <li><P>17 МЕРКУРИЙ-114.1Ф,</P></li>
-    <li><P>18 ШТРИХ-ФР-Ф,</P></li>
-    <li><P>19 ЭЛВЕС-МИНИ-ФР-Ф,</P></li>
-    <li><P>20 ТОРНАДО,</P></li>
-    <li><P>23 ТОРНАДО-К,</P></li>
-    <li><P>24 ФЕЛИКС-РК / ЕНВД,</P></li>
-    <li><P>25 ШТРИХ-ФР-К / ПТК,</P></li>
-    <li><P>26 ЭЛВЕС-ФР-К,</P></li>
-    <li><P>27 ФЕЛИКС-3СК,</P></li>
-    <li><P>28 ШТРИХ-МИНИ-ФР-К/ ПТК/ ПТК,</P></li>
-    <li><P>30 FPrint-02K / ЕНВД,</P></li>
-    <li><P>31 FPrint-03K / ЕНВД,</P></li>
-    <li><P>32 FPrint-88K / ЕНВД,</P></li>
-    <li><P>33 BIXOLON-01K,</P></li>
-    <li><P>35 FPrint-5200K / ЕНВД,</P></li>
-    <li><P>41 PayVKP-80K,</P></li>
-    <li><P>42 Аура-01ФР-KZ,</P></li>
-    <li><P>43 PayVKP-80KZ,</P></li>
-    <li><P>45 PayPPU-700K,</P></li>
-    <li><P>46 PayCTS-2000K,</P></li>
-    <li><P>47 FPrint -55 ПТК / K / ЕНВД,</P></li>
-    <li><P>50 Wincor Nixdorf TH-230K,</P></li>
-    <li><P>51 FPrint -11 ПТК / ЕНВД,</P></li>
-    <li><P>52 FPrint -22 ПТК / K / ЕНВД,</P></li>
-    <li><P>53 FPrint -77 ПТК / ЕНВД,</P></li>
-    <li><P>54 FPrintPay-01ПТК,</P></li>
-    <li><P>57 АТОЛ 25Ф,</P></li>
-    <li><P>62 АТОЛ 55Ф,</P></li>
-    <li><P>63 АТОЛ 22Ф,</P></li>
-    <li><P>64 АТОЛ 52Ф,</P></li>
-    <li><P>67 АТОЛ 11Ф,</P></li>
-    <li><P>69 АТОЛ 77Ф,</P></li>
-    <li><P>75 АТОЛ 60Ф,</P></li>
-    <li><P>76 Казначей ФА,</P></li>
-    <li><P>77 АТОЛ 42ФС,</P></li>
-    <li><P>101 POSPrint FP410K,</P></li>
-    <li><P>102 MSTAR-Ф,</P></li>
-    <li><P>103 Мария-301 МТМ,</P></li>
-    <li><P>106 СП101ФР-К/СП402ФР-К,</P></li>
-    <li><P>107 ШТРИХ-КОМБО-ФР-К,</P></li>
-    <li><P>109 МИНИ-ФП6,</P></li>
-    <li><P>110 ШТРИХ-М-ФР-К//ПТК,</P></li>
-    <li><P>111 MSTAR-TK.1,</P></li>
-    <li><P>113 ШТРИХ-LIGHT-ФР-К/ ПТК,</P></li>
-    <li><P>114 КРИСТАЛЛ СЕРВИС: ПИРИТ ФР01К,</P></li>
-    <li><P>115 NCR-001K,</P></li>
-    <li><P>116 IKC-E260T,</P></li>
-    <li><P>117 ПОРТ FP-300/FP-550/FP-1000,</P></li>
-    <li><P>118 ШТРИХ-ФР-Ф (БЕЛАРУСЬ),</P></li>
-    <li><P>119 Datecs: FP3530T,</P></li>
-    <li><P>120 ПОРТ FP-60,</P></li>
-    <li><P>121 Мебиус-2К/3К,</P></li>
-    <li><P>123 Spark-801T/115K,</P></li>
-    <li><P>125 ШТРИХ-ФР-К-KZ,</P></li>
-    <li><P>126 Штрих-М: ПТК RR-01К 02К 04К,</P></li>
-    <li><P>127 Штрих-М: ПТК Retail-01К,</P></li>
-    <li><P>128 Кристалл Сервис: Pirit K</P></li>
-    </ul>
+                <P>3 Триум-Ф,</P></li>
+            <li><P>14 ФЕЛИКС-Р Ф,</P></li>
+            <li><P>15 ФЕЛИКС-02К / ЕНВД,</P></li>
+            <li><P>17 МЕРКУРИЙ-114.1Ф,</P></li>
+            <li><P>18 ШТРИХ-ФР-Ф,</P></li>
+            <li><P>19 ЭЛВЕС-МИНИ-ФР-Ф,</P></li>
+            <li><P>20 ТОРНАДО,</P></li>
+            <li><P>23 ТОРНАДО-К,</P></li>
+            <li><P>24 ФЕЛИКС-РК / ЕНВД,</P></li>
+            <li><P>25 ШТРИХ-ФР-К / ПТК,</P></li>
+            <li><P>26 ЭЛВЕС-ФР-К,</P></li>
+            <li><P>27 ФЕЛИКС-3СК,</P></li>
+            <li><P>28 ШТРИХ-МИНИ-ФР-К/ ПТК/ ПТК,</P></li>
+            <li><P>30 FPrint-02K / ЕНВД,</P></li>
+            <li><P>31 FPrint-03K / ЕНВД,</P></li>
+            <li><P>32 FPrint-88K / ЕНВД,</P></li>
+            <li><P>33 BIXOLON-01K,</P></li>
+            <li><P>35 FPrint-5200K / ЕНВД,</P></li>
+            <li><P>41 PayVKP-80K,</P></li>
+            <li><P>42 Аура-01ФР-KZ,</P></li>
+            <li><P>43 PayVKP-80KZ,</P></li>
+            <li><P>45 PayPPU-700K,</P></li>
+            <li><P>46 PayCTS-2000K,</P></li>
+            <li><P>47 FPrint -55 ПТК / K / ЕНВД,</P></li>
+            <li><P>50 Wincor Nixdorf TH-230K,</P></li>
+            <li><P>51 FPrint -11 ПТК / ЕНВД,</P></li>
+            <li><P>52 FPrint -22 ПТК / K / ЕНВД,</P></li>
+            <li><P>53 FPrint -77 ПТК / ЕНВД,</P></li>
+            <li><P>54 FPrintPay-01ПТК,</P></li>
+            <li><P>57 АТОЛ 25Ф,</P></li>
+            <li><P>62 АТОЛ 55Ф,</P></li>
+            <li><P>63 АТОЛ 22Ф,</P></li>
+            <li><P>64 АТОЛ 52Ф,</P></li>
+            <li><P>67 АТОЛ 11Ф,</P></li>
+            <li><P>69 АТОЛ 77Ф,</P></li>
+            <li><P>75 АТОЛ 60Ф,</P></li>
+            <li><P>76 Казначей ФА,</P></li>
+            <li><P>77 АТОЛ 42ФС,</P></li>
+            <li><P>101 POSPrint FP410K,</P></li>
+            <li><P>102 MSTAR-Ф,</P></li>
+            <li><P>103 Мария-301 МТМ,</P></li>
+            <li><P>106 СП101ФР-К/СП402ФР-К,</P></li>
+            <li><P>107 ШТРИХ-КОМБО-ФР-К,</P></li>
+            <li><P>109 МИНИ-ФП6,</P></li>
+            <li><P>110 ШТРИХ-М-ФР-К//ПТК,</P></li>
+            <li><P>111 MSTAR-TK.1,</P></li>
+            <li><P>113 ШТРИХ-LIGHT-ФР-К/ ПТК,</P></li>
+            <li><P>114 КРИСТАЛЛ СЕРВИС: ПИРИТ ФР01К,</P></li>
+            <li><P>115 NCR-001K,</P></li>
+            <li><P>116 IKC-E260T,</P></li>
+            <li><P>117 ПОРТ FP-300/FP-550/FP-1000,</P></li>
+            <li><P>118 ШТРИХ-ФР-Ф (БЕЛАРУСЬ),</P></li>
+            <li><P>119 Datecs: FP3530T,</P></li>
+            <li><P>120 ПОРТ FP-60,</P></li>
+            <li><P>121 Мебиус-2К/3К,</P></li>
+            <li><P>123 Spark-801T/115K,</P></li>
+            <li><P>125 ШТРИХ-ФР-К-KZ,</P></li>
+            <li><P>126 Штрих-М: ПТК RR-01К 02К 04К,</P></li>
+            <li><P>127 Штрих-М: ПТК Retail-01К,</P></li>
+            <li><P>128 Кристалл Сервис: Pirit K</P></li>
+        </ul>
     </div>
-    <br>
-    <br>
-
+    <div class="line"></div>
     </P><img src="image/head.png" class="img-responsive"/>
-    <h2>Collapsible Sidebar Using Bootstrap 3</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.</p>
+    <h2 id="home2">Установка программы</h2>
+    <p>На Linux (Ubuntu) программа ставится запуском скрипта – установщика с правами администратора.<br>
+        Кассовый аппарат (ККM) подключается через USB порт. Пинпад подключается тоже через USB порт, настроек в программе не
+        требует, пинпад должен быть настроен сотрудниками банка.<br>
+        Сканер штрих кода подключается через USB порт в режиме клавиатуры, настроек не требует<br>
+    <div class="alert alert-warning">
+        <strong>Внимание:</strong> В ККM, должен быт выставлен Режим обмена – USB.
+    </div>
+    </p>
+    <p>На ОС Windovs программа ставится вручную.<br>
+        Ставится драйвер ККM, настраивается режим обмена через Интернет.<br>
+        <a class="btn btn-link" href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=42&LESSON_ID=9291">Установка
+            драйвера ккм.</a><br>
+        <a class="btn btn-link" href="http://spb-kassa.ru/%D0%B0%D1%82%D0%BE%D0%BB_%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_
+        %D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B_EoU.html">Настройка службы EoU.</a><br>
+        В любой каталог копируются файлы прогрммы.
+        Пинпад подключается  через USB порт, настроек в программе не
+        требует, пинпад должен быть настроен сотрудниками банка.<br>
+        Сканер штрих кода подключается через USB порт в режиме клавиатуры, настроек не требует<br>
+    </p>
 
     <div class="line"></div>
 
     <img data-original="image/head_action.png" height="1200" width="1920" class="img-responsive"/>
-    <h2>Lorem Ipsum Dolor</h2>
+    <h2>Устновка программы</h2>
+    <p>На Linux (Ubuntu) программа ставится запуском скрипта – установщика с правами администратора.<br>
+        Кассовый аппарат (ККТ) подключается через USB . Пинпад подключается тоже через USB порт, настроек в программе не
+        требует, пинпад должен быть настроен сотрудниками банка.<br>
+        Сканер штрих кода подключается через USB порт в режиме клавиатуры, настроек не требует<br>
+    <div class="alert alert-warning">
+        <strong>Внимание:</strong> В ККТ, должен быт выставлен Режим обмена – USB.
+    </div>
+
+    </p>
+
+    <div class="line"></div>
+
+    <h2 id="home3">Lorem Ipsum Dolor</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -154,16 +223,7 @@
 
     <div class="line"></div>
 
-    <h2>Lorem Ipsum Dolor</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.</p>
-
-    <div class="line"></div>
-
-    <h3>Lorem Ipsum Dolor</h3>
+    <h3 id="home4">Lorem Ipsum Dolor</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -178,26 +238,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-    var e=true;
+    var e = true;
     $(document).ready(function () {
-
-
         $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js', function () {
-
             $('#main .img-responsive').lazyload({});
         });
-
-
         $('#sidebarCollapse').on('click', function () {
-            e=!e;
-
-
+            e = !e;
             $('#sidebar').toggleClass('active');
-            if(e==false){
-
-                $('#main').css('margin-left','10px');
-            }else {
-                $('#main').css('margin-left','250px');
+            if (e == false) {
+                $('#main').css('margin-left', '10px');
+            } else {
+                $('#main').css('margin-left', '250px');
             }
         });
     });
